@@ -44,6 +44,7 @@ Welcome to the Node.js Microservices Project! This document outlines best practi
 - Use `.env` files for local secrets (never commit them).
 - Start all services with Docker Compose:
   ```bash
+  docker-compose down && docker system prune -af && docker-compose up -d --build (-d meand ditached mode like pm2 after closing terminal api can be accessed)
   docker-compose down --volumes && docker system prune -af && docker-compose up --build
   docker-compose down && docker system prune -af && docker-compose up --build(If ypu dont want to loose sql data)
   ```
