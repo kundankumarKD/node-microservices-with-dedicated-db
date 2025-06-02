@@ -2,8 +2,9 @@
   "name": "post-service",
   "version": "1.0.0",
   "main": "app.js",
-  "scripts": {
-    "start": "node app.js"
+   "scripts": {
+    "start": "node app.js",
+    "lint": "eslint ."
   },
   "dependencies": {
     "amqplib": "^0.10.8",
