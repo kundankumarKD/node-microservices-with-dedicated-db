@@ -19,11 +19,26 @@ jobs:
         with:
           node-version: '18' # Use your project's Node version
 
-      - name: Install dependencies
+      - name: Install dependencies for post-service
+        working-directory: ./post-service
         run: npm install
 
-      - name: Run Lint (optional)
+      - name: Install dependencies for user-service
+        working-directory: ./user-service
+        run: npm install
+
+      - name: Run Lint for post-service (optional)
+        working-directory: ./post-service
         run: npm run lint
 
-      - name: Run Tests
+      - name: Run Lint for user-service (optional)
+        working-directory: ./user-service
+        run: npm run lint
+
+      - name: Run Tests for post-service
+        working-directory: ./post-service
+        run: npm test
+
+      - name: Run Tests for user-service
+        working-directory: ./user-service
         run: npm test
