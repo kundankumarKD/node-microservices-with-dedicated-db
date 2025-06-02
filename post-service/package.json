@@ -2,7 +2,7 @@
   "name": "post-service",
   "version": "1.0.0",
   "main": "app.js",
-   "scripts": {
+  "scripts": {
     "start": "node app.js",
     "lint": "eslint ."
   },
